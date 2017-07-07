@@ -29,7 +29,7 @@ ORM框架：Mybatis
 * 使用 IntelliJ IDEA 导入项目，然后使用Maven构建该项目所需要的 jar包
 * 在 IntelliJ IDEA 中，配置我们的 Tomcat， 然后把使用Maven构建好的项目添加到Tomcat中
 * 运行
-![image]()
+![image](http://imgsrc.baidu.com/forum/pic/item/5a8d9e1c8701a18b1ea553e4942f07082938fead.jpg)
 * 登录账户
   * 管理员账户：admin
   * 老师账户：1001
