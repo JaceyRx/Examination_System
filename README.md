@@ -43,13 +43,22 @@ ORM框架：Mybatis
 * 教师管理：同上
 * 账户密码重置：
 * 修改密码：
+![image](http://imgsrc.baidu.com/forum/pic/item/96499412c8fcc3ce82d37e989845d688d53f20e7.jpg)
+![image](http://imgsrc.baidu.com/forum/pic/item/e8829bfd5266d0165ce22a839d2bd40734fa357f.jpg)
+![image](http://imgsrc.baidu.com/forum/pic/item/004a5ef082025aafccfdca60f1edab64024f1a23.jpg)
 ### 2、教师模块功能
 教师登陆后，可以获取其，教授的课程列表，并可以给已经选择该课程的同学打分，无法对已经给完分的同学进行二次操作
 * 我的课程
 * 修改密码
+![image](http://imgsrc.baidu.com/forum/pic/item/db884fd9f2d3572c8f662b778013632763d0c36b.jpg)
+![image](http://imgsrc.baidu.com/forum/pic/item/7e08dedeb48f8c549e49728430292df5e1fe7f58.jpg)
+![image](http://imgsrc.baidu.com/forum/pic/item/7c6d7482b2b7d0a2eb88b336c1ef76094a369ab6.jpg)
 ### 3、学生模块功能
 学生登录后，根据学生信息，获取其已经选择的课程，和已经修完的课程
 * 所有课程: 在这里选修课程，选好后，将会自动跳转到已选课程选项
 * 已选课程: 这里显示的是，还没修完的课程，也就是老师还没给成绩，由于还没有给成绩，所以这里可以进行退课操作
 * 已修课程: 显示已经修完，老师已经给成绩的课程
-
+* 修改密码:
+![image](http://imgsrc.baidu.com/forum/pic/item/8f86a0b1cb1349541f345ecf5c4e9258d0094ac8.jpg)
+![image](http://imgsrc.baidu.com/forum/pic/item/4f0822b30f2442a7871a4b0edb43ad4bd01302da.jpg)
+![image](http://imgsrc.baidu.com/forum/pic/item/821ad6f2b21193136cb8481b6f380cd790238d78.jpg)
