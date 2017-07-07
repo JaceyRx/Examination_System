@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop.xsd
+	http://www.springframework.org/schema/tx
+	http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <!--组件扫描器-->
+    <context:component-scan base-package="com.system.realm" />
+
+    <!-- shiro过滤器bean，id要和web.xml中filter-name一致 -->
+    <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+        <property name="securityManager" ref="securityManager" />
+
+        <!-- 要求登录时的链接(登录页面地址)，非必须的属性，默认会自动寻找Web工程根目录下的"/login.jsp"页面 -->
+        <!--<property name="loginUrl" value="/admin/show"></property>-->
+
+        <property name="filterChainDefinitions">
+            <value>
+                #这里相当于ini配置文件中的[urls]
+                #url=拦截器[参数]，拦截器
+                # /techer/** = authc, perms[document:read]
+                # 如果用户没有该角色，然后访问该 路径 会报 401错误
+
+                /admin/** = authc, roles[admin]
+                /techer/** = authc, roles[teacher]
+                /student/** = authc, roles[student]
+
+                # 当访问login时，不用进行认证（anon表示匿名）
+                /login = anon
+
+                /logout = logout
+
+                # 配置静态资源可以匿名访问
+                /css/** = anon
+                /js/** = anon
+                /images/** = anon
+                /fonts/** = anon
+
+                # 除了上面额 /login 可以匿名访问，其他路径都需要登录访问
+                # 如果没登录，就访问其他路径会跳转到 /login 登录
+
+                /** = authc
+            </value>
+        </property>
+    </bean>
+
+
+    <!-- 配置securityManager -->
+    <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+        <!--配置自定义Realm-->
+        <!--loginRealm 使用扫描器扫描注册成功了-->
+        <property name="realm" ref="loginRealm" />
+        <!-- <property name="sessionMode" value="native"/> -->
+    </bean>
+    <!-- 生命周期 -->
+    <bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor" />
+
+
+    <!-- 启用shiro注解 -->
+    <bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator" depends-on="lifecycleBeanPostProcessor"/>
+    <bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">
+        <property name="securityManager" ref="securityManager"/>
+    </bean>
+
+
+</beans>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xmlns:context="http://www.springframework.org/schema/context"
+               xmlns:aop="http://www.springframework.org/schema/aop"
+               xmlns:tx="http://www.springframework.org/schema/tx"
+               xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop.xsd
+	http://www.springframework.org/schema/tx
+	http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+
+    <!--组件扫描，如果想要类被组件扫描，扫描到，并在Spring容器中注册的话
+    必须在类名上添加上注解 @Repository、@Service、@Controller、@Component （这四个注解功能一样，名字不同只是为了区分不同功能）
+    @Component 是通用组件
+    -->
+    <context:component-scan base-package="com.system.service.impl"/>
+    <!--<bean id="studentService" class="com.system.service.impl.StudentServiceImpl"></bean>-->
+    <!--<bean id="teacherServiceImpl" class="com.system.service.impl.TeacherServiceImpl"></bean>-->
+    <!--<bean id="courseServiceImpl" class="com.system.service.impl.CourseServiceImpl"></bean>-->
+    <!--<bean id="SelectedCourseServiceImpl" class="com.system.service.impl.SelectedCourseServiceImpl"></bean>-->
+
+</beans>
