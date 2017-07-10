@@ -26,7 +26,7 @@ ORM框架：Mybatis
 ### 2、初始化项目
 * 在你的Mysql中，创建一个数据库名称为 examination_system 的数据库，并导入我提供的 .sql 文件,
 * 进入src/main/resources修改mysql.properties配置文件,把数据库登录名和密码，改为你本地的
-* 使用 IntelliJ IDEA 导入项目，然后使用Maven构建该项目所需要的 jar包
+* 使用 IntelliJ IDEA 导入项目，选择Maven项目选项，一路点击next就行，导入项目后，如果src目录等，都没显示出来，别急先使用Maven构建该项目
 * 在 IntelliJ IDEA 中，配置我们的 Tomcat， 然后把使用Maven构建好的项目添加到Tomcat中
 * 运行
 ![image](http://imgsrc.baidu.com/forum/pic/item/5a8d9e1c8701a18b1ea553e4942f07082938fead.jpg)
