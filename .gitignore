@@ -1,3 +1,5 @@
+# 该文件作用是，配置，git忽略，哪些文件不上传，不监控其变化
+
 # Compiled class file
 *.class
 
@@ -20,3 +22,26 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+# =====================================
+
+*.class
+
+#package file
+*.war
+*.ear
+
+#maven ignore
+target/
+
+#eclipse ignore
+.settins/
+.project
+.classpatch
+
+#idea
+.idea/
+/idea/
+*.ipr
+*.iml
+*.iws
