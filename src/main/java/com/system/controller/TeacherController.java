@@ -83,4 +83,14 @@ public class TeacherController {
         return "teacher/passwordRest";
     }
 
+    //搜索课程
+    @RequestMapping(value = "selectCourse", method = {RequestMethod.POST})
+    private String selectCourse(String findByName, Model model) throws Exception {
+
+        List<CourseCustom> list = courseService.findByName(findByName);
+
+        model.addAttribute("courseList", list);
+        return "teacher/showCourse";
+    }
+
 }
