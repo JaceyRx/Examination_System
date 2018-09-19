@@ -14,9 +14,7 @@ import javax.annotation.Resource;
 import java.util.List;
 
 
-/**
- * Created by Jacey on 2017/6/30.
- */
+
 @Controller
 @RequestMapping("/admin")
 public class AdminController {
@@ -36,7 +34,6 @@ public class AdminController {
     @Resource(name = "userloginServiceImpl")
     private UserloginService userloginService;
 
-    /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<学生操作>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
     //  学生信息显示
     @RequestMapping("/showStudent")
@@ -62,7 +59,7 @@ public class AdminController {
 
     }
 
-    //  添加学生信息页面显示
+
     @RequestMapping(value = "/addStudent", method = {RequestMethod.GET})
     public String addStudentUI(Model model) throws Exception {
 

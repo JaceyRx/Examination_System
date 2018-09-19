@@ -17,7 +17,7 @@
 
 
     <!--<mappers>-->
-        <!--由于使用了spring与mybati整合包进行，mapper扫描，这里不需要配置-->
+        <!--由于使用了spring与mybatis整合包进行，mapper扫描，这里不需要配置-->
     <!--</mappers>-->
 
 
