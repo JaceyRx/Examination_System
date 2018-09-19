@@ -28,7 +28,7 @@
 		<div class="row" style="margin-top: 280px; ">
 			<div class="col-md-4"></div>
 			<div class="col-md-4" id="login-box">
-				<form class="form-horizontal" role="form" action="/login" id="from1" method="post">
+				<form class="form-horizontal" role="form" action="login" id="from1" method="post">
 				  <div class="form-group">
 				    <label for="firstname" class="col-sm-3 control-label">用户id</label>
 				    <div class="col-sm-9">
