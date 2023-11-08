@@ -1,6 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
+
+
   <groupId>com.jacey</groupId>
   <artifactId>Examination_System</artifactId>
   <packaging>war</packaging>
@@ -142,13 +144,14 @@
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
-      <version>5.1.41</version>
+      <version>8.0.11</version>
     </dependency>
       <dependency>
           <groupId>org.jetbrains</groupId>
           <artifactId>annotations-java5</artifactId>
           <version>RELEASE</version>
       </dependency>
+
 
   </dependencies>
 
@@ -162,8 +165,20 @@
       <resource>
         <directory>src/main/java</directory>
         <includes>
+          <include>**/*.properties</include>
           <include>**/*.xml</include>
+          <include>**/*.yml</include>
         </includes>
+        <filtering>false</filtering>
+      </resource>
+      <resource>
+        <directory>src/main/resources</directory>
+        <includes>
+          <include>**/*.properties</include>
+          <include>**/*.xml</include>
+          <include>**/*.yml</include>
+        </includes>
+        <filtering>false</filtering>
       </resource>
     </resources>
   </build>
